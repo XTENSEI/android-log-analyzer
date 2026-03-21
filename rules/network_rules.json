@@ -1,0 +1,38 @@
+[
+  {
+    "id": "NETWORK_ERROR",
+    "name": "Network Error",
+    "pattern": "Network error|SocketException|ConnectException|connection refused",
+    "severity": "Medium",
+    "category": "Network",
+    "description": "Network connectivity issues",
+    "enabled": true
+  },
+  {
+    "id": "WIFI_ISSUES",
+    "name": "WiFi Issues",
+    "pattern": "WiFi|wlan0|wifi.*failed|wifi.*error",
+    "severity": "Medium",
+    "category": "Network",
+    "description": "WiFi connection problems",
+    "enabled": true
+  },
+  {
+    "id": "MOBILE_DATA",
+    "name": "Mobile Data Issues",
+    "pattern": "mobile data|data connection|cellular|rild",
+    "severity": "Medium",
+    "category": "Network",
+    "description": "Mobile data connectivity issues",
+    "enabled": true
+  },
+  {
+    "id": "DNS_ERROR",
+    "name": "DNS Error",
+    "pattern": "DNS|nameserver|resolve|Unknown host",
+    "severity": "Medium",
+    "category": "Network",
+    "description": "DNS resolution failures",
+    "enabled": true
+  }
+]
