@@ -1,0 +1,21 @@
+{
+  "name": "android-log-analyzer",
+  "version": "1.0.0",
+  "description": "High-performance Android log analyzer",
+  "rust": {
+    "core": {
+      "parser": "streaming",
+      "rules": "regex-based",
+      "memory": "efficient"
+    },
+    "api": {
+      "framework": "fastapi",
+      "host": "0.0.0.0",
+      "port": 8000
+    },
+    "cli": {
+      "language": "go",
+      "binary": true
+    }
+  }
+}
