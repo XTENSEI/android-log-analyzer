@@ -1,0 +1,38 @@
+[
+  {
+    "id": "RUNTIME_ERROR",
+    "name": "Runtime Error",
+    "pattern": "RuntimeException|IllegalState|IllegalArgument",
+    "severity": "High",
+    "category": "Code",
+    "description": "Runtime exception detected",
+    "enabled": true
+  },
+  {
+    "id": "STACK_OVERFLOW",
+    "name": "Stack Overflow",
+    "pattern": "StackOverflowError|stack.*overflow",
+    "severity": "Critical",
+    "category": "Code",
+    "description": "Stack overflow error",
+    "enabled": true
+  },
+  {
+    "id": "CLASS_NOT_FOUND",
+    "name": "Class Not Found",
+    "pattern": "ClassNotFoundException|NoClassDefFoundError",
+    "severity": "High",
+    "category": "Code",
+    "description": "Class loading error",
+    "enabled": true
+  },
+  {
+    "id": "METHOD_NOT_FOUND",
+    "name": "Method Not Found",
+    "pattern": "NoSuchMethodError|AbstractMethodError",
+    "severity": "High",
+    "category": "Code",
+    "description": "Method resolution error",
+    "enabled": true
+  }
+]
