@@ -4,6 +4,7 @@ use std::fmt;
 pub mod analyzer;
 pub mod config;
 pub mod correlation;
+pub mod filter;
 pub mod parser;
 pub mod rules;
 
