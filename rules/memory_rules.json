@@ -1,0 +1,29 @@
+[
+  {
+    "id": "GC_ERROR",
+    "name": "Garbage Collection Error",
+    "pattern": "GC.*error|gc_collectable|GC overhead",
+    "severity": "Medium",
+    "category": "Memory",
+    "description": "Garbage collection issues",
+    "enabled": true
+  },
+  {
+    "id": "MEMORY_LEAK",
+    "name": "Memory Leak Detection",
+    "pattern": "leak|leaking|allocation|free.*failed",
+    "severity": "High",
+    "category": "Memory",
+    "description": "Potential memory leak detected",
+    "enabled": true
+  },
+  {
+    "id": "HEAP_ERROR",
+    "name": "Heap Error",
+    "pattern": "heap.*error|heap.*corrupt|heap space",
+    "severity": "Critical",
+    "category": "Memory",
+    "description": "Heap memory corruption or exhaustion",
+    "enabled": true
+  }
+]
