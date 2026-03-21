@@ -1,0 +1,24 @@
+{
+  "name": "android-log-analyzer",
+  "version": "1.0.0",
+  "description": "High-performance multi-language Android log analyzer",
+  "scripts": {
+    "build": "make build",
+    "test": "make test",
+    "run-api": "make run-api",
+    "run-web": "make run-web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XTENSEI/android-log-analyzer"
+  },
+  "keywords": [
+    "android",
+    "log",
+    "analyzer",
+    "rust",
+    "fastapi"
+  ],
+  "author": "XTENSEI",
+  "license": "MIT"
+}
