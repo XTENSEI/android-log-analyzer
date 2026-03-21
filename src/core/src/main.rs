@@ -8,8 +8,11 @@ use std::path::PathBuf;
 #[command(name = "loganalyzer")]
 #[command(about = "High-performance Android log analyzer", long_about = None)]
 struct Args {
+    #[arg(value_name = "FILE")]
+    input: Option<PathBuf>,
+
     #[arg(short, long, value_name = "FILE")]
-    input: PathBuf,
+    input_file: Option<PathBuf>,
 
     #[arg(short, long, value_name = "FORMAT", default_value = "json")]
     output: OutputFormat,
@@ -41,9 +44,11 @@ fn main() {
     env_logger::init();
     let args = Args::parse();
 
+    let input = args.input.or(args.input_file).expect("No input file specified");
+
     let analyzer = Analyzer::new();
 
-    match analyzer.analyze_file(&args.input) {
+    match analyzer.analyze_file(&input) {
         Ok(result) => match args.output {
             OutputFormat::Json => {
                 let json = to_string_pretty(&result).unwrap();

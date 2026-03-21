@@ -1,0 +1,15 @@
+01-15 10:23:45.123  1000  2000 I ActivityManager: Starting activity Intent { cmp=com.example.app/.MainActivity }
+01-15 10:23:45.456  1000  2000 W ActivityManager: Activity pause timeout for ActivityRecord{abc123}
+01-15 10:23:46.789  2345  2346 E AndroidRuntime: FATAL EXCEPTION: main
+01-15 10:23:46.790  2345  2346 E AndroidRuntime: Process: com.example.app, PID: 2345
+01-15 10:23:46.791  2345  2346 E AndroidRuntime: java.lang.NullPointerException
+01-15 10:23:46.792  2345  2346 E AndroidRuntime:     at com.example.app.MainActivity.onCreate(MainActivity.java:45)
+01-15 10:23:47.001  1000  2000 I ActivityManager: Process com.example.app (pid 2345) has died
+01-15 10:23:48.123  1000  2000 W LowMemory: system low on memory
+01-15 10:23:49.234  1000  1234 I WindowManager: Screen rotation completed
+01-15 10:23:50.345  5678  5679 E SELinux: avc: denied { read } for path=/data/data/com.example.app
+01-15 10:23:51.456  1000  2000 I ActivityManager: ANR in com.example.app
+01-15 10:23:51.457  1000  2000 I ActivityManager: Reason: Input dispatching timed out
+01-15 10:23:52.567  1000  2000 E ActivityManager: Unable to start service Intent { cmp=com.example.service }: not found
+01-15 10:23:53.678  9012  9013 W System.err: OutOfMemoryError: heap size exceeded
+01-15 10:23:54.789  1000  2000 I BatteryService: Battery level: 85%
