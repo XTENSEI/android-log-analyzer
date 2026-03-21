@@ -7,6 +7,7 @@ pub mod correlation;
 pub mod filter;
 pub mod mmap;
 pub mod parser;
+pub mod performance;
 pub mod rules;
 pub mod stats;
 pub mod timeline;
