@@ -3,16 +3,41 @@ use std::fmt;
 
 pub mod aggregator;
 pub mod analyzer;
+pub mod atomic;
+pub mod bitset;
+pub mod bloom;
+pub mod cache;
 pub mod config;
 pub mod correlation;
+pub mod counter;
+pub mod dedup;
+pub mod error_agg;
 pub mod export;
 pub mod filter;
+pub mod heap;
+pub mod histogram;
+pub mod index;
+pub mod logger;
+pub mod lru_cache;
 pub mod mmap;
 pub mod parser;
 pub mod performance;
+pub mod pid_index;
+pub mod priority;
+pub mod process;
+pub mod ratelimit;
+pub mod reporter;
+pub mod ring;
 pub mod rules;
+pub mod scorer;
+pub mod sparse;
 pub mod stats;
 pub mod timeline;
+pub mod timer;
+pub mod timeseries;
+pub mod trie;
+pub mod watcher;
+pub mod window;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LogEntry {
