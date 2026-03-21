@@ -1,7 +1,54 @@
 use crate::rules::{Rule, RuleEngine};
 use serde::Deserialize;
 use std::fs;
+use std::path::PathBuf;
 use std::path::Path;
+
+pub struct AnalyzerConfig {
+    pub binary_path: Option<PathBuf>,
+    pub rules_dir: Option<PathBuf>,
+    pub max_file_size: u64,
+    pub timeout_seconds: u64,
+    pub streaming_mode: bool,
+}
+
+impl AnalyzerConfig {
+    pub fn new() -> Self {
+        Self {
+            binary_path: None,
+            rules_dir: None,
+            max_file_size: 500 * 1024 * 1024,
+            timeout_seconds: 300,
+            streaming_mode: true,
+        }
+    }
+
+    pub fn with_binary_path(mut self, path: PathBuf) -> Self {
+        self.binary_path = Some(path);
+        self
+    }
+
+    pub fn with_rules_dir(mut self, path: PathBuf) -> Self {
+        self.rules_dir = Some(path);
+        self
+    }
+
+    pub fn with_max_file_size(mut self, size: u64) -> Self {
+        self.max_file_size = size;
+        self
+    }
+
+    pub fn with_timeout(mut self, seconds: u64) -> Self {
+        self.timeout_seconds = seconds;
+        self
+    }
+}
+
+impl Default for AnalyzerConfig {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 
 #[derive(Debug, Deserialize)]
 struct RuleFile {
