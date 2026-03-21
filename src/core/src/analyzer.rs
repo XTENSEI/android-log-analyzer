@@ -1,6 +1,5 @@
 use crate::rules::{Issue, IssueSeverity, RuleEngine};
-use crate::{LogEntry, LogLevel};
-use rayon::prelude::*;
+use crate::LogLevel;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::fs::File;

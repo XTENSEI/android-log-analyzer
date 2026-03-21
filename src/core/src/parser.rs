@@ -1,5 +1,4 @@
 use crate::{LogEntry, LogLevel};
-use memchr::memchr;
 use std::io::{BufRead, Read};
 
 pub struct LogParser {
@@ -58,18 +57,24 @@ impl LogParser {
         }
     }
 
-    pub fn parse_stream<R: Read>(&mut self, reader: R, callback: impl Fn(LogEntry)) -> usize {
+    pub fn parse_stream<R: BufRead>(&mut self, mut reader: R, callback: impl Fn(LogEntry)) -> usize {
         let mut count = 0;
         let mut line_number = 0;
+        let mut line = String::new();
 
-        for line in reader.lines() {
-            line_number += 1;
-            if let Ok(line) = line {
-                if let Some(mut entry) = Self::parse_line(&line) {
-                    entry.line_number = line_number;
-                    callback(entry);
-                    count += 1;
+        loop {
+            line.clear();
+            match reader.read_line(&mut line) {
+                Ok(0) => break,
+                Ok(_) => {
+                    line_number += 1;
+                    if let Some(mut entry) = Self::parse_line(&line) {
+                        entry.line_number = line_number;
+                        callback(entry);
+                        count += 1;
+                    }
                 }
+                Err(_) => break,
             }
         }
 

@@ -1,0 +1,14 @@
+/home/andrei/python30/android-log-analyzer/src/core/target/release/deps/serde-f6fb04c590fe0da6.d: /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/andrei/python30/android-log-analyzer/src/core/target/release/build/serde-15cbe8e4db7f7121/out/private.rs
+
+/home/andrei/python30/android-log-analyzer/src/core/target/release/deps/libserde-f6fb04c590fe0da6.rlib: /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/andrei/python30/android-log-analyzer/src/core/target/release/build/serde-15cbe8e4db7f7121/out/private.rs
+
+/home/andrei/python30/android-log-analyzer/src/core/target/release/deps/libserde-f6fb04c590fe0da6.rmeta: /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/andrei/python30/android-log-analyzer/src/core/target/release/build/serde-15cbe8e4db7f7121/out/private.rs
+
+/home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/home/andrei/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/home/andrei/python30/android-log-analyzer/src/core/target/release/build/serde-15cbe8e4db7f7121/out/private.rs:
+
+# env-dep:OUT_DIR=/home/andrei/python30/android-log-analyzer/src/core/target/release/build/serde-15cbe8e4db7f7121/out

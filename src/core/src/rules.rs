@@ -1,4 +1,4 @@
-use crate::{LogEntry, LogLevel};
+use crate::LogEntry;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
