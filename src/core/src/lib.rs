@@ -7,6 +7,7 @@ pub mod correlation;
 pub mod filter;
 pub mod parser;
 pub mod rules;
+pub mod stats;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LogEntry {
