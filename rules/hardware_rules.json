@@ -1,0 +1,47 @@
+[
+  {
+    "id": "KERNEL_PANIC",
+    "name": "Kernel Panic",
+    "pattern": "Kernel panic|panic|Oops:|BUG: unable to handle",
+    "severity": "Critical",
+    "category": "Kernel",
+    "description": "Kernel panic detected - system crash",
+    "enabled": true
+  },
+  {
+    "id": "HARDWARE_ERROR",
+    "name": "Hardware Error",
+    "pattern": "hardware error|ECC|memory error|I/O error",
+    "severity": "Critical",
+    "category": "Hardware",
+    "description": "Hardware-related error",
+    "enabled": true
+  },
+  {
+    "id": "FILESYSTEM_ERROR",
+    "name": "Filesystem Error",
+    "pattern": "EXT4-fs|FATFS|NTFS|filesystem.*error|IO error",
+    "severity": "High",
+    "category": "Storage",
+    "description": "Filesystem errors",
+    "enabled": true
+  },
+  {
+    "id": "USB_ERROR",
+    "name": "USB Error",
+    "pattern": "usb.*error|usb.*failed|usb.*died",
+    "severity": "Low",
+    "category": "Hardware",
+    "description": "USB connectivity issues",
+    "enabled": true
+  },
+  {
+    "id": "BLUETOOTH_ERROR",
+    "name": "Bluetooth Error",
+    "pattern": "bluetooth|bt.*error|hci.*failed",
+    "severity": "Low",
+    "category": "Hardware",
+    "description": "Bluetooth issues",
+    "enabled": true
+  }
+]
