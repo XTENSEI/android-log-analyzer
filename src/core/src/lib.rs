@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 use std::fmt;
 
 pub mod parser;
+pub mod rules;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LogEntry {
