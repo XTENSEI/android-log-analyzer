@@ -1,0 +1,29 @@
+[
+  {
+    "id": "SELINUX_AVC",
+    "name": "SELinux AVC Denial",
+    "pattern": "avc: denied|avc: granted|SELinux: avc:",
+    "severity": "High",
+    "category": "Security",
+    "description": "SELinux access vector cache denial",
+    "enabled": true
+  },
+  {
+    "id": "SELINUX_CONTEXT",
+    "name": "SELinux Context Issue",
+    "pattern": "context=|security_context=|scontext=",
+    "severity": "Medium",
+    "category": "Security",
+    "description": "SELinux context mismatch",
+    "enabled": true
+  },
+  {
+    "id": "SELINUX_POLICY",
+    "name": "SELinux Policy Error",
+    "pattern": "SELinux: policy|selinux_policy_load|selinuxfs",
+    "severity": "High",
+    "category": "Security",
+    "description": "SELinux policy loading error",
+    "enabled": true
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "APP_CRASH",
+    "name": "Application Crash",
+    "pattern": "FATAL EXCEPTION|Process.*died|has died",
+    "severity": "Critical",
+    "category": "Stability",
+    "description": "Application has crashed",
+    "enabled": true
+  },
+  {
+    "id": "ANR",
+    "name": "Application Not Responding",
+    "pattern": "ANR in|Reason:|CPU usage from|cannot update.*window",
+    "severity": "Critical",
+    "category": "Performance",
+    "description": "Application not responding detected",
+    "enabled": true
+  },
+  {
+    "id": "NPE",
+    "name": "NullPointerException",
+    "pattern": "NullPointerException|null reference",
+    "severity": "High",
+    "category": "Code",
+    "description": "Null pointer exception in code",
+    "enabled": true
+  },
+  {
+    "id": "OOM",
+    "name": "Out of Memory",
+    "pattern": "OutOfMemoryError|java.lang.OutOfMemoryError|VM heap",
+    "severity": "Critical",
+    "category": "Memory",
+    "description": "Out of memory error",
+    "enabled": true
+  },
+  {
+    "id": "WTF",
+    "name": "What a Terrible Failure",
+    "pattern": "WTF|What a terrible failure|Assert failed",
+    "severity": "High",
+    "category": "Stability",
+    "description": "Unexpected internal error",
+    "enabled": true
+  },
+  {
+    "id": "NATIVE_CRASH",
+    "name": "Native Crash",
+    "pattern": "Native crash|segfault|SIGSEGV|SIGABRT",
+    "severity": "Critical",
+    "category": "Stability",
+    "description": "Native code crash detected",
+    "enabled": true
+  }
+]

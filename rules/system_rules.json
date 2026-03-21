@@ -1,0 +1,47 @@
+[
+  {
+    "id": "LOW_MEMORY",
+    "name": "Low Memory Warning",
+    "pattern": "low memory|killing|kswapd|OOM killed",
+    "severity": "Medium",
+    "category": "Memory",
+    "description": "System low on memory",
+    "enabled": true
+  },
+  {
+    "id": "BATTERY_ISSUES",
+    "name": "Battery Issues",
+    "pattern": "battery|drain|voltage|temperature|thermal",
+    "severity": "Medium",
+    "category": "Power",
+    "description": "Battery or thermal issues",
+    "enabled": true
+  },
+  {
+    "id": "WATCHDOG",
+    "name": "Watchdog Timeout",
+    "pattern": "watchdog|watch dog|system_server.*not responding",
+    "severity": "Critical",
+    "category": "Stability",
+    "description": "Watchdog timeout detected",
+    "enabled": true
+  },
+  {
+    "id": "KERNEL_PANIC",
+    "name": "Kernel Panic",
+    "pattern": "Kernel panic|panic|Oops:|BUG:",
+    "severity": "Critical",
+    "category": "Stability",
+    "description": "Kernel panic detected",
+    "enabled": true
+  },
+  {
+    "id": "SYSTEM_SERVER",
+    "name": "System Server Issues",
+    "pattern": "system_server|ActivityManager|WindowManager",
+    "severity": "High",
+    "category": "System",
+    "description": "System server issues",
+    "enabled": true
+  }
+]
