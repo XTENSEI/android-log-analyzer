@@ -9,6 +9,7 @@ pub mod mmap;
 pub mod parser;
 pub mod rules;
 pub mod stats;
+pub mod timeline;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LogEntry {
