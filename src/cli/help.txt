@@ -1,0 +1,29 @@
+#!/bin/bash
+
+cat <<'EOF'
+========================================
+ Android Log Analyzer - Help
+========================================
+
+USAGE:
+  loganalyzer <command> [options]
+
+COMMANDS:
+  analyze    Analyze a log file
+  batch      Analyze multiple files
+  watch      Watch a file for changes
+  serve      Start API server
+  help       Show this help
+
+EXAMPLES:
+  loganalyzer analyze app.log
+  loganalyzer analyze app.log --output json
+  loganalyzer batch ./logs/
+  loganalyzer watch app.log
+
+OPTIONS:
+  --output     Output format (json, text, summary)
+  --severity   Filter by severity
+  --verbose    Verbose output
+
+EOF
