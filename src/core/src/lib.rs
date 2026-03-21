@@ -3,6 +3,7 @@ use std::fmt;
 
 pub mod analyzer;
 pub mod config;
+pub mod correlation;
 pub mod parser;
 pub mod rules;
 
