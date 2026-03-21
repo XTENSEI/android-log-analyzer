@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "name": "android-log-analyzer",
+  "description": "High-performance multi-language Android log analyzer",
+  "architecture": {
+    "core": "Rust",
+    "cli": "Go",
+    "api": "Python FastAPI",
+    "web": "Vanilla JS"
+  },
+  "features": [
+    "streaming-log-parser",
+    "rule-based-analysis",
+    "multi-log-correlation",
+    "json-export",
+    "web-ui"
+  ],
+  "performance": {
+    "target_size_mb": 500,
+    "streaming_support": true,
+    "parallel_processing": true
+  }
+}
