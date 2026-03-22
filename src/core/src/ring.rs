@@ -19,18 +19,14 @@ impl<T> RingBuffer<T> {
 
     pub fn push(&mut self, item: T) {
         if self.full {
+            self.buffer[self.tail] = item;
             self.tail = (self.tail + 1) % self.capacity;
+            self.head = self.tail;
         } else {
             self.buffer.push(item);
             if self.buffer.len() == self.capacity {
                 self.full = true;
             }
-        }
-        
-        if self.full {
-            self.buffer[self.tail] = item;
-            self.tail = (self.tail + 1) % self.capacity;
-            self.head = self.tail;
         }
     }
 

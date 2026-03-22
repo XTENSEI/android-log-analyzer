@@ -37,21 +37,21 @@ impl LogExporter {
             .collect()
     }
 
-    pub fn filter_by_tag(entries: &[LogEntry], tag: &str) -> Vec<&LogEntry> {
+    pub fn filter_by_tag<'a>(entries: &'a [LogEntry], tag: &str) -> Vec<&'a LogEntry> {
         entries
             .iter()
             .filter(|e| e.tag == tag)
             .collect()
     }
 
-    pub fn filter_by_pid(entries: &[LogEntry], pid: u32) -> Vec<&LogEntry> {
+    pub fn filter_by_pid<'a>(entries: &'a [LogEntry], pid: u32) -> Vec<&'a LogEntry> {
         entries
             .iter()
             .filter(|e| e.pid == pid)
             .collect()
     }
 
-    pub fn search(entries: &[LogEntry], query: &str) -> Vec<&LogEntry> {
+    pub fn search<'a>(entries: &'a [LogEntry], query: &str) -> Vec<&'a LogEntry> {
         let query_lower = query.to_lowercase();
         entries
             .iter()

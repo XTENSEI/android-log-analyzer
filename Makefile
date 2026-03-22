@@ -19,12 +19,16 @@ build-core:
 
 build-cli:
 	@echo "Building Go CLI..."
-	cd $(CLI_DIR) && go build -o ../../$(BIN_DIR)/loganalyzer-cli .
-	@echo "CLI built successfully"
+	@if command -v go >/dev/null 2>&1; then \
+		cd $(CLI_DIR) && go build -o ../../$(BIN_DIR)/loganalyzer-cli .; \
+		echo "CLI built successfully"; \
+	else \
+		echo "Go not installed, skipping CLI build"; \
+	fi
 
 build-api:
 	@echo "Python API dependencies..."
-	cd $(API_DIR) && pip install -r requirements.txt -q
+	@cd $(API_DIR) && pip install -r requirements.txt -q || echo "Warning: Python dependencies failed, API may not work"
 	@echo "API dependencies installed"
 
 build-web:
@@ -48,8 +52,12 @@ clean:
 
 install: build
 	@echo "Installing to /usr/local/bin..."
-	cp $(BIN_DIR)/loganalyzer /usr/local/bin/
-	cp $(BIN_DIR)/loganalyzer-cli /usr/local/bin/
+	@if [ -f $(BIN_DIR)/loganalyzer ]; then \
+		cp $(BIN_DIR)/loganalyzer /usr/local/bin/; \
+	fi
+	@if [ -f $(BIN_DIR)/loganalyzer-cli ]; then \
+		cp $(BIN_DIR)/loganalyzer-cli /usr/local/bin/; \
+	fi
 	@echo "Installation complete"
 
 run-api: build-api

@@ -19,7 +19,7 @@ impl Cache {
     }
 
     pub fn set(&mut self, key: String, value: String, ttl: u64) {
-        self.entries.insert(key, CacheEntry { key, value, ttl });
+        self.entries.insert(key.clone(), CacheEntry { key, value, ttl });
     }
 
     pub fn get(&self, key: &str) -> Option<String> {

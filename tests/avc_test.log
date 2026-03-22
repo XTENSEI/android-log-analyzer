@@ -1,0 +1,6 @@
+[    1.234] avc: denied { read write } for path=/data/data/com.example.app dev=sda3 scontext=u:r:untrusted_app:s0 tcontext=u:object_r:app_data_file:s0 tclass=file
+[    1.456] avc: denied { execmod } for path=/data/app/com.example-1.apk scontext=u:r:platform_app:s0 tcontext=u:object_r:apk_data_file:s0 tclass=file
+[    1.789] avc: denied { open } for path=/sys/kernel/debug scontext=u:r:shell:s0 tcontext=u:object_r:debugfs:s0 tclass=dir
+[    2.012] avc: denied { getattr } for path=/proc/1/stat scontext=u:r:untrusted_app:s0 tcontext=u:object_r:proc:s0 tclass=file
+[    2.345] avc: denied { ioctl } ioctlcmd=0x671e scontext=u:r:system_server:s0 tcontext=u:object_r:proc_perfmgr:s0 tclass=file
+[    2.678] avc: denied { read write } for path=/dev/block/vold scontext=u:r:vold:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file

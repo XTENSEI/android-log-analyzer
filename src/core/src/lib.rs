@@ -3,8 +3,6 @@ use std::fmt;
 
 pub mod aggregator;
 pub mod analyzer;
-pub mod atomic;
-pub mod bitset;
 pub mod bloom;
 pub mod cache;
 pub mod config;
@@ -50,7 +48,7 @@ pub struct LogEntry {
     pub line_number: usize,
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum LogLevel {
     Verbose,
     Debug,

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Log Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Android Log Analyzer</h1>
+            <p class="subtitle">High-performance log analysis engine</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="drop-zone" id="dropZone">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <p>Drag & drop log file here</p>
+                    <p class="or">or</p>
+                    <label class="file-input-label">
+                        <input type="file" id="fileInput" accept=".txt,.log">
+                        Browse Files
+                    </label>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="summary-cards">
+                    <div class="card total">
+                        <span class="card-value" id="totalEntries">0</span>
+                        <span class="card-label">Total Entries</span>
+                    </div>
+                    <div class="card errors">
+                        <span class="card-value" id="errorCount">0</span>
+                        <span class="card-label">Errors</span>
+                    </div>
+                    <div class="card warnings">
+                        <span class="card-value" id="warningCount">0</span>
+                        <span class="card-label">Warnings</span>
+                    </div>
+                    <div class="card time">
+                        <span class="card-value" id="scanTime">0ms</span>
+                        <span class="card-label">Scan Time</span>
+                    </div>
+                </div>
+
+                <div class="issues-section">
+                    <h2>Issues Found</h2>
+                    <div class="filter-bar">
+                        <select id="severityFilter">
+                            <option value="all">All Severities</option>
+                            <option value="Critical">Critical</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="issues-list" id="issuesList"></div>
+                </div>
+
+                <div class="tags-section">
+                    <h2>Top Tags</h2>
+                    <div class="tags-cloud" id="tagsCloud"></div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing log file...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Rust Core Engine</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,5 +1,3 @@
-use std::collections::HashSet;
-
 pub struct BloomFilter {
     bits: Vec<bool>,
     size: usize,
@@ -16,7 +14,7 @@ impl BloomFilter {
     }
 
     fn hash(&self, item: &str, seed: usize) -> usize {
-        let mut hash = 0;
+        let mut hash: usize = 0;
         for (i, byte) in item.bytes().enumerate() {
             hash = hash.wrapping_mul(31).wrapping_add((byte as usize).wrapping_mul(seed + i));
         }

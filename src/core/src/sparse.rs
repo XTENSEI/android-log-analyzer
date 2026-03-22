@@ -37,7 +37,7 @@ impl<T: Default + Clone> SparseArray<T> {
     }
 }
 
-impl<T: Default> Default for SparseArray<T> {
+impl<T: Default + Clone> Default for SparseArray<T> {
     fn default() -> Self {
         Self::new()
     }

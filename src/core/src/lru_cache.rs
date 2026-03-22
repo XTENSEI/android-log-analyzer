@@ -6,7 +6,7 @@ pub struct LruCache<K, V> {
     order: Vec<K>,
 }
 
-impl<K: std::hash::Hash + Clone, V> LruCache<K, V> {
+impl<K: std::hash::Hash + Clone + PartialEq + Eq, V> LruCache<K, V> {
     pub fn new(capacity: usize) -> Self {
         Self {
             capacity,
