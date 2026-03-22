@@ -1,16 +1,16 @@
 use crate::{LogEntry, LogLevel};
-use std::io::{BufRead, Read};
+use std::io::BufRead;
 
 pub struct LogParser {
-    buffer: Vec<u8>,
-    position: usize,
+    _buffer: Vec<u8>,
+    _position: usize,
 }
 
 impl LogParser {
     pub fn new() -> Self {
         Self {
-            buffer: Vec::with_capacity(65536),
-            position: 0,
+            _buffer: Vec::with_capacity(65536),
+            _position: 0,
         }
     }
 

@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 pub struct PriorityQueue<T> {
     items: Vec<T>,
     priorities: Vec<i32>,

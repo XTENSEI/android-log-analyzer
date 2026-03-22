@@ -2,8 +2,6 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::path::Path;
 
-use crate::parser::LogParser;
-
 pub struct StreamingParser {
     chunk_size: usize,
 }

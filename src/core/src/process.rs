@@ -20,7 +20,7 @@ impl ProcessTracker {
         }
     }
 
-    pub fn track(&mut self, pid: u32, tag: &str, is_error: bool, is_warning: bool) {
+    pub fn track(&mut self, pid: u32, _tag: &str, is_error: bool, is_warning: bool) {
         let info = self.processes.entry(pid).or_insert(ProcessInfo {
             pid,
             name: None,

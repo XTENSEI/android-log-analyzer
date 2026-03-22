@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 pub struct RateLimiter {
     requests: HashMap<String, usize>,
     window_ms: u64,
