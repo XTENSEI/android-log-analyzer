@@ -20,21 +20,28 @@ impl LogParser {
             return None;
         }
 
-        let parts: Vec<&str> = line.splitn(6, ' ').collect();
-        if parts.len() < 5 {
+        let parts: Vec<&str> = line.split(' ').filter(|s| !s.is_empty()).collect();
+        if parts.len() < 6 {
             return None;
         }
 
-        let timestamp = Self::parse_timestamp(parts[0]);
-        let level = parts[1].chars().next().map(LogLevel::from).unwrap_or(LogLevel::Unknown);
-        let tag = parts[2].to_string();
-        let pid = parts[3].parse().unwrap_or(0);
-        let tid = parts[4].parse().unwrap_or(0);
-        let message = if parts.len() > 5 {
-            parts[5..].join(" ")
+        let month_day = parts[0];
+        let time = parts[1];
+        let pid_str = parts[2];
+        let tid_str = parts[3];
+        let level_char = parts[4].chars().next().unwrap_or('?');
+        let level = LogLevel::from(level_char);
+        let tag_with_colon = parts[5];
+        let tag = tag_with_colon.trim_end_matches(':').to_string();
+        let message = if parts.len() > 6 {
+            parts[6..].join(" ")
         } else {
             String::new()
         };
+
+        let timestamp = Self::parse_timestamp(month_day, time);
+        let pid = pid_str.parse().unwrap_or(0);
+        let tid = tid_str.parse().unwrap_or(0);
 
         Some(LogEntry {
             timestamp,
@@ -47,11 +54,10 @@ impl LogParser {
         })
     }
 
-    fn parse_timestamp(s: &str) -> i64 {
-        if let Ok(ts) = s.parse::<i64>() {
-            ts
-        } else if s.contains('-') {
-            0
+    fn parse_timestamp(month_day: &str, time: &str) -> i64 {
+        let combined = format!("{} {}", month_day, time);
+        if let Ok(dt) = chrono::NaiveDateTime::parse_from_str(&combined, "%m-%d %H:%M:%S%.f") {
+            dt.and_utc().timestamp()
         } else {
             0
         }
